@@ -48,10 +48,71 @@ ml-sample-demo/
     ├── confusion_matrix_logistic_regression.png
     └── confusion_matrix_random_forest.png
 ```
-## Requirements
-- Python 3.8+
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
-- seaborn
+## How to Run in Google Colab
+If you are running this project in Google Colab, first mount Google Drive:
+```bash
+from google.colab import drive
+drive.mount('/content/drive')
+```
+Then run the script. The output files will be saved to:
+```bash
+/MyDrive/ml-sample-demo/
+```
+Generated files:
+- `synthetic_titanic_sample.csv`
+- `confusion_matrix_logistic_regression.png`
+- `confusion_matrix_random_forest.png`
+
+## How to run locally
+```bash
+git clone https://github.com/sncarenyang/ml-sample-demo.git
+cd ml-sample-demo
+
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+# venv\Scripts\activate     # Windows
+
+pip install -r requirements.txt
+python titanic_ml_demo.py
+```
+
+## Model Workflow
+**1. Data Generation**
+A synthetic dataset is created with these columns:
+- `Age`
+- `Sex`
+-  `Pclass`
+-  `Survived`
+  
+**2. Preprocessing**
+- `Sex` is converted into a numeric feature using label encoding.
+- Features and labels are split into `X` and `y`.
+
+**3. Training**
+Two models are trained and evaluated:
+- Logistic Regression
+- Random Forest
+  
+**4. Evaluation**
+The script prints:
+- Dataset shape 
+- A preview of the data
+- Accuracy
+- Classification report
+It also saves confusion matrix plots for both models.
+
+## Results
+In a typical run, both models produce reasonable baseline results on the synthetic dataset.  
+Because the dataset is generated artificially, the scores are meant for demonstration rather than benchmarking.
+
+##  License & Disclaimer
+- The code is released under the MIT License.
+- This is a demo project for learning and portfolio purposes.
+- The synthetic dataset does not represent the real Titanic dataset.
+- The goal is to demonstrate a standard ML workflow in a clean, reproducible way.
+  
+
+
+
+
+
