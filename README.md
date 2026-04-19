@@ -48,6 +48,12 @@ ml-sample-demo/
     ├── confusion_matrix_logistic_regression.png
     └── confusion_matrix_random_forest.png
 ```
+## Example Output
+
+![/imageA](/images/confusion_matrix_logistic_regression.png)
+
+![/imageB](/images/confusion_matrix_random_forest.png)
+
 ## How to Run in Google Colab
 If you are running this project in Google Colab, first mount Google Drive:
 ```bash
