@@ -1,27 +1,19 @@
+#  ML Sample Demo (Titanic-style Classification)
 
-# A ML Classification Demo (Titanic-like)
+This project demonstrates a complete machine learning workflow using a synthetic Titanic-style dataset. The demo built with Python, pandas, scikit-learn, Matplotlib, and Seaborn.
 
-A machine learning classification demo built with Python, pandas, scikit-learn, Matplotlib, and Seaborn.
+## 🧠 Overview
 
-This project generates a synthetic Titanic-like dataset, trains two classic classifiers (Logistic Regression and Random Forest), evaluates them with a confusion matrix and classification report, and saves the outputs to Google Drive when run in Google Colab.
+This demo covers the full pipeline:
 
----
-
-## Overview
-
-This repository demonstrates a minimal end-to-end machine learning workflow:
-
-- Generate or load tabular data.
-- Perform basic preprocessing.
-- Split the data into training and testing sets.
-- Train and evaluate two classifiers.
-- Save the dataset and evaluation figures for later review.
+- Data generation  
+- Data preprocessing  
+- Model training  
+- Model evaluation and comparison  
 
 The dataset used in this project is synthetic, so no external data download is required.
 
----
-
-## Features
+## 📊 Features
 
 - Synthetic Titanic-like dataset with 1,000 samples.
 - Basic feature engineering with categorical encoding.
@@ -36,7 +28,7 @@ The dataset used in this project is synthetic, so no external data download is r
 
 ---
 
-## Project Structure
+## 🏗️ Project Structure
 
 ```text
 ml-sample-demo/
@@ -48,13 +40,17 @@ ml-sample-demo/
     ├── confusion_matrix_logistic_regression.png
     └── confusion_matrix_random_forest.png
 ```
-## Example Output
+## 🧰 Tech Stack
 
-![/imageA](/images/confusion_matrix_logistic_regression.png)
+- Python  
+- NumPy  
+- Pandas  
+- Scikit-learn
+- Matplotlib
 
-![/imageB](/images/confusion_matrix_random_forest.png)
 
-## How to Run in Google Colab
+
+## 🔍 How to Run in Google Colab
 If you are running this project in Google Colab, first mount Google Drive:
 ```bash
 from google.colab import drive
@@ -69,7 +65,7 @@ Generated files:
 - `confusion_matrix_logistic_regression.png`
 - `confusion_matrix_random_forest.png`
 
-## How to run locally
+## 🔍 How to run locally
 ```bash
 git clone https://github.com/sncarenyang/ml-sample-demo.git
 cd ml-sample-demo
@@ -82,24 +78,28 @@ pip install -r requirements.txt
 python titanic_ml_demo.py
 ```
 
-## Model Workflow
+## 🚀 Model Workflow
+
 **1. Data Generation**
-A synthetic dataset is created with these columns:
+The workflow begins by generating a synthetic dataset inspired by the Titanic survival problem. 
+
+a synthetic dataset is created with 1000 rows × 4 columns first:
 - `Age`
 - `Sex`
 -  `Pclass`
 -  `Survived`
   
-**2. Preprocessing**
-- `Sex` is converted into a numeric feature using label encoding.
-- Features and labels are split into `X` and `y`.
+and then the Sex column is coverted into a numerica feature using label encoding to generate the 5th column:
+-  `Sex_encoded`
 
-**3. Training**
+A **1000 raws * 5 columns** dataset is completed. This dataset includes both numerical and categorical features, making it suitable for supervised learning tasks
+
+**2. Training**
 Two models are trained and evaluated:
 - Logistic Regression
 - Random Forest
   
-**4. Evaluation**
+**3. Evaluation**
 The script prints:
 - Dataset shape 
 - A preview of the data
@@ -107,9 +107,72 @@ The script prints:
 - Classification report
 It also saves confusion matrix plots for both models.
 
-## Results
+## 🔬 Results
+
 In a typical run, both models produce reasonable baseline results on the synthetic dataset.  
 Because the dataset is generated artificially, the scores are meant for demonstration rather than benchmarking.
+
+📈 Logistic Regression
+
+![Logistic Regression](/images/confusion_matrix_logistic_regression.png)
+
+**Performance:**
+- Accuracy: 0.635  
+- Strong recall for "Survived" (0.98)  
+- Very poor recall for "Not Survived" (0.09)
+- The model tends to classify most samples as "Survived"
+
+---
+
+📈  Random Forest
+
+![Random Forest](/images/confusion_matrix_random_forest.png)
+
+**Performance:**
+- Accuracy: 0.555  
+- More balanced recall across classes  
+- Lower overall performance compared to Logistic Regress
+  
+## 🧠 Key Insights
+
+- Logistic Regression achieves higher accuracy  
+- However, it is **heavily biased toward the "Survived" class**  
+- Random Forest provides a more balanced classification  
+
+> ⚠️ **Accuracy alone is not sufficient to evaluate model performance**
+
+---
+
+## 📑 Classification Report Summary
+
+### Logistic Regression
+- Precision (Not Survived): 0.78  
+- Recall (Not Survived): 0.09 ❗  
+- Recall (Survived): 0.98  
+
+👉 Indicates strong imbalance in predictions  
+
+---
+
+### Random Forest
+- Precision (Not Survived): 0.43  
+- Recall (Not Survived): 0.46  
+- Recall (Survived): 0.61  
+
+👉 More stable across classes  
+
+---
+
+## 🎯 Conclusion
+
+This project demonstrates that:
+
+- Model selection affects not only accuracy but also class behavior  
+- Evaluation metrics such as **recall and precision are critical**  
+- Balanced performance may be preferable depending on application  
+
+---
+
 
 ##  License & Disclaimer
 - The code is released under the MIT License.
