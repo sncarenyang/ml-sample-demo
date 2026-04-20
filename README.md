@@ -176,9 +176,18 @@ This project demonstrates that:
 - Balanced performance may be preferable depending on application  
 
 ---
+## 💡 Highlights
+ • End-to-end ML pipeline
+ • Model comparison (Logistic Regression vs Random Forest)
+ • Clear demonstration of model bias
+ • Practical understanding of evaluation metric
+
+## 👩‍💻 Author
+Shi-Ning Caren Yang
 
 
-##  License & Disclaimer
+
+## 🌐 License & Disclaimer
 - The code is released under the MIT License.
 - This is a demo project for learning and portfolio purposes.
 - The synthetic dataset does not represent the real Titanic dataset.
