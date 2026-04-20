@@ -37,9 +37,12 @@ ml-sample-demo/
 ├── requirements.txt
 ├── synthetic_titanic_sample.cvs
 └── images/
+    ├── logistic_regression_data.png
+    ├── random_forest_data.png
     ├── confusion_matrix_logistic_regression.png
     └── confusion_matrix_random_forest.png
 ```
+
 ## 🧰 Tech Stack
 
 - Python  
@@ -113,6 +116,7 @@ In a typical run, both models produce reasonable baseline results on the synthet
 Because the dataset is generated artificially, the scores are meant for demonstration rather than benchmarking.
 
 📈 Logistic Regression
+![Logistic Regression data](/images/logistic_regression_data.png)
 
 ![Logistic Regression](/images/confusion_matrix_logistic_regression.png)
 
@@ -125,7 +129,7 @@ Because the dataset is generated artificially, the scores are meant for demonstr
 ---
 
 📈  Random Forest
-
+![Random_forest data](/images/random_forest_data.png)
 ![Random Forest](/images/confusion_matrix_random_forest.png)
 
 **Performance:**
