@@ -143,7 +143,7 @@ Because the dataset is generated artificially, the scores are meant for demonstr
 - However, it is **heavily biased toward the "Survived" class**  
 - Random Forest provides a more balanced classification  
 
-> ⚠️ **Accuracy alone is not sufficient to evaluate model performance**
+ ⚠️ **Accuracy alone is not sufficient to evaluate model performance**
 
 ---
 
@@ -176,15 +176,15 @@ This project demonstrates that:
 - Balanced performance may be preferable depending on application  
 
 ---
+
 ## 💡 Highlights
- • End-to-end ML pipeline
- • Model comparison (Logistic Regression vs Random Forest)
- • Clear demonstration of model bias
- • Practical understanding of evaluation metric
+ - End-to-end ML pipeline
+ - Model comparison (Logistic Regression vs Random Forest)
+ - Clear demonstration of model bias
+ - Practical understanding of evaluation metric
 
 ## 👩‍💻 Author
 Shi-Ning Caren Yang
-
 
 
 ## 🌐 License & Disclaimer
